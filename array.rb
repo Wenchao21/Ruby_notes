@@ -21,3 +21,5 @@ puts 'aaa'
 nums = Array.new(10) {|e|e = e * 2 }
 
 puts "#{nums}"
+
+
