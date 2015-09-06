@@ -1,22 +1,25 @@
-$LOAD_PATH << '.'
-=begin
-require "support"
 
-class Decade
-include Week
-		no_of_yrs = 10
-		def no_of_months
-			puts Week::FIRST_DAY
-			number = 10 * 12
-			puts number
-		end
+class Name
+  attr_accessor :age,:addr
+  attr :test,true
+
+  def initialize
+    @age = 20
+    @addr = 'Pudong'
+  end
+
+  def self.oldest(*cc)
+    cc.sort_by {|x|x.age}.last.age
+  end
+
 end
 
-d1=Decade.new
+cc = Name.new
+cc.test = 12
+puts cc.test
+puts cc.age
 
-puts Week::FIRST_DAY
 
-Week.weeks_in_month
-Week.weeks_in_year
-d1.no_of_months
-=end
+
+
+
