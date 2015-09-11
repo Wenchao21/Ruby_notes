@@ -1,7 +1,15 @@
+load  'project.rb'
+
+module FirstModule
+  def say
+    puts 'hello'
+  end
+end
 
 class Name
   attr_accessor :age,:addr
   attr :test,true
+  include Project,FirstModule
 
   def initialize
     @age = 20
@@ -14,11 +22,15 @@ class Name
 
 end
 
-cc = Name.new
-cc.test = 12
-puts cc.test
-puts cc.age
 
+a = {username:{name:'wenchao'},password:'aaa'}
+
+#a.each_pair {|x,y| puts x;puts y}
+
+puts a[:username][:name]
+a = {username:'second'}
+
+puts a[:username]
 
 
 
