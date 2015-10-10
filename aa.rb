@@ -31,6 +31,7 @@ puts a[:username][:name]
 a = {username:'second'}
 
 puts a[:username]
+mengda
 
 
 
